@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools==75.1.0", "wheel==0.44.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "worldmodelrt"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy==1.26.4",
+  "omegaconf==2.3.0",
+  "pandas==2.2.3",
+  "pydicom==3.0.1",
+  "scikit-learn==1.5.2",
+  "scipy==1.14.1",
+  "SimpleITK==2.4.0",
+  "torch==2.4.1",
+  "torchdiffeq==0.2.4"
+]
+
+[project.scripts]
+worldmodelrt-train = "worldmodelrt.entrypoint:main"
+
+[tool.setuptools]
+package-dir = {"" = "code"}
+
+[tool.setuptools.packages.find]
+where = ["code"]
+
+[tool.ruff]
+line-length = 180
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.black]
+line-length = 180
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["worldmodelrt"]
+mypy_path = "code"

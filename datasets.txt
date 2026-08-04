@@ -1,0 +1,3 @@
+RADCURE | https://www.cancerimagingarchive.net/collection/radcure/ | DOI 10.7937/TCIA.20220314 | TCIA Data Usage Policy
+QIN-HeadNeck | https://www.cancerimagingarchive.net/collection/qin-headneck/ | DOI 10.7937/K9/TCIA.2015.K0F5CGLI | TCIA Data Usage Policy
+HNTS-MRG 2024 v1 | https://zenodo.org/records/11199559 | DOI 10.5281/zenodo.11199559 | CC BY 4.0

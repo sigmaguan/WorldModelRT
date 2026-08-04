@@ -1,0 +1,5 @@
+reconstruction: 1.0
+physics: 0.1
+kl: 0.01
+smoothness: 0.001
+physics_margin: 0.1

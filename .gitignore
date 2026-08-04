@@ -1,0 +1,10 @@
+data/
+runs/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.npz

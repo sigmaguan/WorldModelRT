@@ -1,0 +1,37 @@
+device: cuda
+gpu_count: 1
+gpu_model: NVIDIA A100 80GB
+optimizer: AdamW
+learning_rate: 0.0001
+weight_decay: 0.00001
+scheduler: cosine_annealing_warm_restarts
+gradient_clip_norm: 1.0
+precision: float32
+early_stopping_patience: 15
+stages:
+  synthetic:
+    trajectories: 50000
+    epochs: 200
+    batch_size: 256
+  population:
+    dataset: RADCURE
+    epochs: 100
+    batch_size: 64
+    interpolation_weight: 0.7
+  temporal:
+    datasets:
+      - QIN-HeadNeck
+      - HNTS-MRG
+    epochs: 50
+    batch_size: 16
+seeds:
+  - 42
+  - 123
+  - 256
+  - 389
+  - 512
+  - 678
+  - 741
+  - 853
+  - 927
+  - 1024
